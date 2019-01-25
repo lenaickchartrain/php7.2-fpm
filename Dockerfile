@@ -9,7 +9,7 @@ RUN apt-get update \
   && apt-get install -y zlib1g-dev libicu-dev g++ libxml2-dev vim curl git
 
 
-RUN docker-php-ext-install pdo_mysql && docker-php-ext-configure intl
+RUN docker-php-ext-install pdo_mysql zip && docker-php-ext-configure intl
 RUN docker-php-ext-enable opcache	
 	
 ADD ./conf /usr/local/etc/php/conf.d
