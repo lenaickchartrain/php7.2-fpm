@@ -10,7 +10,7 @@ RUN apt-get update \
 
 
 RUN docker-php-ext-install pdo_mysql zip && docker-php-ext-configure intl
-RUN docker-php-ext-enable opcache	
+RUN docker-php-ext-enable opcache
 	
 ADD ./conf /usr/local/etc/php/conf.d
 
